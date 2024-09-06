@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import LocomotiveScroll from "locomotive-scroll";
 import "./loco.css";
-import image from "./main.jpg";
+import image from "./main.webp";
 
 export default function Landing() {
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import image2 from "./6.png";
-import image1 from "./1.png";
+import image2 from "./6.webp";
+import image1 from "./1.webp";
 import Typical from "react-typical";
 
 function Works() {
