@@ -1,0 +1,12 @@
+/* Cursor.css */
+.custom-cursor {
+  position: fixed;
+  width: 24px; /* Adjust size */
+  height: 24px;
+  border-radius: 50%;
+  background: teal; /* Customize color or use an image */
+  pointer-events: none; /* Prevent the cursor from interfering with clicks */
+  transition: transform 0.1s ease; /* Smooth movement */
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensure it’s above other content */
+}

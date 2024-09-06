@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#page {
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+  color: black;
+  padding-bottom: 50vw;
+  overflow: hidden;
+}
+#page h1 {
+  font-size: 40vw;
+  text-transform: uppercase;
+}
+
+.cursor {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: fixed;
+}
