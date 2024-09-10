@@ -1,16 +1,64 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper/modules";
 import "./About.css";
 import Typical from "react-typical";
+import { gsap, Power4, Elastic } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
+  useEffect(() => {
+    const magneto = document.querySelector(".magneto");
+    const magnetoText = document.querySelector(".magneto-text");
+
+    magneto.addEventListener("mousemove", (e) => {
+      let boundbox = magneto.getBoundingClientRect();
+      const magnetoStrength = 40;
+      const magnetoTextStrength = 80;
+      const newX = (e.clientX - boundbox.left) / magneto.offsetWidth - 0.5;
+      const newY = (e.clientY - boundbox.top) / magneto.offsetHeight - 0.5;
+
+      gsap.to(magneto, {
+        duration: 1,
+        x: newX * magnetoStrength,
+        y: newY * magnetoStrength,
+        ease: Power4.easeOut,
+      });
+
+      gsap.to(magnetoText, {
+        duration: 1,
+        x: newX * magnetoTextStrength,
+        y: newY * magnetoTextStrength,
+        ease: Power4.easeOut,
+      });
+    });
+
+    magneto.addEventListener("mouseleave", (e) => {
+      gsap.to(magneto, {
+        duration: 1,
+        x: 0,
+        y: 0,
+        ease: Elastic.easeOut,
+      });
+
+      gsap.to(magnetoText, {
+        duration: 1,
+        x: 0,
+        y: 0,
+        ease: Elastic.easeOut,
+      });
+    });
+  });
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="about flex flex-col min-h-screen">
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="relative flex-grow">
         <div className="w-full h-screen bg-yellow-500 flex flex-col items-center justify-center text-center px-6 py-12">
           <h1 className="text-5xl font-bold text-white mb-12 uppercase leading-tight">
             <Typical
@@ -19,6 +67,7 @@ export default function About() {
               wrapper="span"
             />
           </h1>
+
           <Swiper
             spaceBetween={30}
             pagination={{ clickable: true }}
@@ -126,6 +175,9 @@ export default function About() {
               </div>
             </SwiperSlide>
           </Swiper>
+          <button className="magneto absolute bottom-4 right-4">
+            <span className="magneto-text">Hey</span>
+          </button>
         </div>
       </main>
     </div>

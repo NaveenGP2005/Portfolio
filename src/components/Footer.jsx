@@ -51,7 +51,7 @@ function Footer() {
               <ul className="list-disc pl-5 space-y-2">
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     Currency Converter
@@ -59,7 +59,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     Typing Game
@@ -67,7 +67,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     Savings Calculator
@@ -75,7 +75,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     Countdown App
@@ -83,7 +83,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     AIWA (Content Generator)
@@ -91,7 +91,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     Blog App
@@ -99,7 +99,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     Image Generator
@@ -112,7 +112,7 @@ function Footer() {
               <ul className="list-disc pl-5 space-y-2">
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     MyResidency
@@ -120,7 +120,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/login"
+                    href="https://github.com/NaveenGP2005/Projects"
                     className="hover:underline"
                   >
                     More projects coming soon
@@ -150,7 +150,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/login"
+                  href="https://github.com/NaveenGP2005/Projects"
                   className="flex items-center gap-2 hover:underline"
                 >
                   Github <FaGithub />

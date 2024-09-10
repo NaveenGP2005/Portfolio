@@ -9,12 +9,17 @@ export default function Landing() {
   useEffect(() => {
     // GSAP animation
     gsap.to(".box1", {
-      x: 1000,
+      x: 1100,
       duration: 2,
       delay: 1,
       rotate: 720,
       repeat: -1,
       yoyo: true,
+    });
+
+    gsap.to(".textStructure h1", {
+      x: 30,
+      duration: 2,
     });
 
     // Initialize Locomotive Scroll
