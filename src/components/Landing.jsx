@@ -4,6 +4,7 @@ import gsap from "gsap";
 import LocomotiveScroll from "locomotive-scroll";
 import "./loco.css";
 import image from "./main.webp";
+import Typical from "react-typical";
 
 export default function Landing() {
   useEffect(() => {
@@ -17,10 +18,18 @@ export default function Landing() {
       yoyo: true,
     });
 
-    gsap.to(".textStructure h1", {
-      x: 30,
-      duration: 2,
-    });
+    const tl = gsap.timeline();
+    tl.to(".textStructure h1", {
+      x: 20,
+      duration: 1,
+    }).to(".textStructure p", {
+      opacity: 1,
+      duration: 1,
+    }).to(".textStructure h2", {
+      opacity: 1,
+      duration: 1,
+      delay: -1,
+    });;
 
     // Initialize Locomotive Scroll
     const locoScroll = new LocomotiveScroll({
@@ -45,22 +54,27 @@ export default function Landing() {
           <h1 className="uppercase text-4xl md:text-5xl font-bold leading-tight mb-6">
             Hello and Welcome!
           </h1>
-          <p className="uppercase text-lg md:text-2xl mb-6 leading-relaxed">
-            I am a 2nd-year Computer Science Engineering student specializing in
+          <p className="uppercase text-lg md:text-2xl mb-6 leading-relaxed opacity-0">
+          <Typical
+              steps={[
+                "I ",
+                1000,
+                "I am ",
+                1000,
+                "I am Naveen ",
+                2000,
+              ]}
+              loop={Infinity}
+              wrapper="b"
+            />  a 2nd-year Computer Science Engineering student specializing in
             Artificial Intelligence and Machine Learning at MS Ramaiah Institute
             of Technology (MSRIT).
           </p>
-          <p className="text-md md:text-lg mb-6 leading-relaxed">
-            My academic journey is driven by a passion for AI and ML. I am
-            committed to exploring innovative solutions and advancing my skills
-            through practical projects and research. I aim to contribute to the
-            field of technology by solving complex problems and developing
-            impactful AI-driven applications.
-          </p>
-          <h2 className="uppercase text-xl md:text-3xl font-semibold pt-10 mb-6">
+          
+          <h2 className="uppercase text-xl md:text-3xl font-semibold pt-10 mb-6 opacity-0">
             Explore My Projects and Learn More About My Work
           </h2>
-          <p className="text-md md:text-lg mb-6 leading-relaxed">
+          <p className="text-md md:text-lg mb-6 leading-relaxed opacity-0">
             I am actively working on various projects related to AI and ML,
             including data analysis, machine learning models, and intelligent
             systems. Feel free to check out my work and get in touch if you want
